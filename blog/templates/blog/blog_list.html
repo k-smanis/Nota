@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+    Nota - All Posts
+{% endblock %}
+
+
+{% block css_files %}
+    <link rel="stylesheet" href="{% static "blog/css/blog_list.css" %}">
+    <link rel="stylesheet" href="{% static "blog/css/blog_post_card.css" %}">
+{% endblock %}
+
+
+{% block content %}
+    <section id="all-posts">
+        <h2>All Posts</h2>
+            <ul>
+                {% for post in posts %}
+                    {% include "blog/includes/blog_post_component.html" with blog_slug=post.slug %}
+                {% endfor %}
+            </ul>
+    </section>
+{% endblock %}
