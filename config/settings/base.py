@@ -14,7 +14,7 @@ from pathlib import Path
 
 
 BASE_DIR = (
-    Path(__file__).resolve().parent.parent
+    Path(__file__).resolve().parent.parent.parent
 )  # Build paths inside the project like this: BASE_DIR / 'subdir'.
 
 DEBUG = True  #! SECURITY WARNING: don't run with debug turned on in production!
