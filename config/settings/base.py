@@ -12,14 +12,13 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 
 from pathlib import Path
 
-
+# Base Settings
 BASE_DIR = (
     Path(__file__).resolve().parent.parent.parent
 )  # Build paths inside the project like this: BASE_DIR / 'subdir'.
 
 DEBUG = True  #! SECURITY WARNING: don't run with debug turned on in production!
 
-# * Base Settings
 INSTALLED_APPS = [
     "blog",
     "django.contrib.admin",
@@ -61,9 +60,7 @@ TEMPLATES = [
 WSGI_APPLICATION = "config.wsgi.application"
 
 
-# Password validation
-# https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
-
+# Password validation (https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators)
 AUTH_PASSWORD_VALIDATORS = [
     {
         "NAME": "django.contrib.auth.password_validation.UserAttributeSimilarityValidator",
@@ -80,30 +77,23 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 
-# Internationalization
-# https://docs.djangoproject.com/en/5.1/topics/i18n/
-
+# Internationalization (https://docs.djangoproject.com/en/5.1/topics/i18n/)
 LANGUAGE_CODE = "en-us"
-
 TIME_ZONE = "UTC"
-
 USE_I18N = True
-
 USE_TZ = True
 
 
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/5.1/howto/static-files/
-
+# Static files (CSS, JavaScript, Images) (https://docs.djangoproject.com/en/5.1/howto/static-files/)
 STATIC_URL = "static/"
-
 STATICFILES_DIRS = [BASE_DIR / "static"]
-# Default primary key field type
-# https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
+
+# Default primary key field type (https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field)
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
-# * Set Development/Production Specific Settings
+
+# Development/Production Specific Settings
 if DEBUG:
     from .dev import *
 else:
