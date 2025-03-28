@@ -1,6 +1,9 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from datetime import date
+from django.views import View
+from .models import PostModel
+from .forms import PostForm
 
 
 posts = [
@@ -40,15 +43,15 @@ def get_date(post):
 
 # Create your views here.
 def blog_index(request) -> HttpResponse:
-    sorted_posts = sorted(posts, key=get_date, reverse=True)
-    latest_posts = sorted_posts[-3:]
+    latest_posts = PostModel.objects.order_by("-date")[:3]
     return render(request, "blog/index.html", {"latest_posts": latest_posts})
 
 
 def blog_list(request) -> HttpResponse:
+    posts = PostModel.objects.all()
     return render(request, "blog/blog_list.html", {"posts": posts})
 
 
-def blog_post(request, blog_slug):
-    post = next((p for p in posts if p["slug"] == blog_slug), None)
+def blog_post(request, blog_slug) -> HttpResponse:
+    post = PostModel.objects.get(slug=blog_slug)
     return render(request, "blog/blog_post.html", {"post": post})

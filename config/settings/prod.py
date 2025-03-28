@@ -20,7 +20,11 @@ DATABASES = {  # TODO: Add production DATABASES before deployment
     }
 }
 
-#
+# Media Settings
+MEDIA_URL = "/media/"
+MEDIA_ROOT = BASE_DIR / "media"
+
+# Security Settings
 SECURE_HSTS_SECONDS = 3600
 SECURE_SSL_REDIRECT = True
 SESSION_COOKIE_SECURE = True
