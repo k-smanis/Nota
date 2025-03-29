@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import TagModel, AuthorModel, PostModel
+from .models import TagModel, AuthorModel, PostModel, CommentModel
 
 
 # Admin Configuartions
@@ -23,7 +23,14 @@ class PostModelAdmin(admin.ModelAdmin):
     autocomplete_fields = ["author"]
 
 
+class CommentModelAdmin(admin.ModelAdmin):
+    list_display = ["content", "post", "user_name", "user_email"]
+    list_filter = ["user_name", "user_email"]
+    search_fields = ["content", "post", "user_name", "user_email"]
+
+
 # Register your models here.
 admin.site.register(TagModel, TagModelAdmin)
 admin.site.register(AuthorModel, AuthorModelAdmin)
 admin.site.register(PostModel, PostModelAdmin)
+admin.site.register(CommentModel, CommentModelAdmin)

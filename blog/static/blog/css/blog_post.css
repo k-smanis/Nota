@@ -1,0 +1,301 @@
+body {
+  background-color: #e7e7e7;
+}
+
+#main-navigation {
+  background-color: #390281;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+#summary {
+  margin: 8rem auto 3rem auto;
+  padding: 2rem;
+  width: 90%;
+  max-width: 90rem;
+  border-radius: 16px;
+  background-color: #5706c0;
+  position: relative;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  height: 22rem;
+}
+
+#summary h2 {
+  color: white;
+  font-size: 4.5rem;
+  margin-bottom: 0.25rem;
+}
+
+#summary article {
+  position: absolute;
+  top: 2rem;
+  right: 3rem;
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  text-align: right;
+  color: white;
+}
+
+#summary article img {
+  width: 12rem;
+  height: 12rem;
+  border-radius: 12px;
+  transform: rotateZ(5deg);
+  border: 5px solid white;
+  margin-bottom: 1rem;
+}
+
+#summary address {
+  font-weight: bold;
+}
+
+#summary a {
+  color: white;
+  text-decoration: none;
+}
+
+#summary time {
+  font-weight: bold;
+}
+
+#read-later {
+  margin: 2rem 0;
+}
+
+#read-later button {
+  background-color: transparent;
+  border: 1px solid white;
+  padding: 0.5rem 2rem;
+  font: inherit;
+  color: white;
+  cursor: pointer;
+}
+
+#read-later button:hover,
+#read-later button:active {
+  background-color: white;
+  color: #390281;
+}
+
+main {
+  width: 90%;
+  max-width: 90rem;
+  margin: 3rem auto;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+.tag {
+  background-color: white;
+  color: #390281;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+}
+
+#comment-form {
+  margin: 3rem auto;
+  width: 90%;
+  max-width: 40rem;
+  border-radius: 12px;
+  background-color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  padding: 1rem;
+}
+
+#comment-form button {
+  font: inherit;
+  background-color: #390281;
+  color: white;
+  border: 1px solid #390281;
+  padding: 0.5rem 1.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#comment-form button:hover,
+#comment-form button:active {
+  background-color: #4f0ba7;
+  border-color: #4f0ba7;
+}
+
+.form-control {
+  margin-bottom: 1rem;
+}
+
+.form-control label {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.form-control input,
+.form-control textarea {
+  display: block;
+  width: 100%;
+  font: inherit;
+  padding: 0.25rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.errorlist {
+  list-style: none;
+  margin: 0.5rem 0;
+  padding: 0;
+  color: #d6000b;
+}
+
+.invalid label {
+  color: #d6000b;
+}
+
+.invalid input,
+.invalid textarea {
+  border-color: #d6000b;
+  background-color: #ffe6e7;
+}
+
+#alert {
+  margin: 8rem auto 3rem auto;
+  border: 1px solid #d6000b;
+  background-color: #ffe6e7;
+  padding: 1rem;
+  width: 90%;
+  max-width: 40rem;
+}
+
+#alert a {
+  text-decoration: none;
+  border: 1px solid #d6000b;
+  background-color: #d6000b;
+  color: white;
+  padding: 0.25rem 1.5rem;
+  border-radius: 6px;
+}
+
+#comments {
+  margin: 3rem auto;
+  width: 90%;
+  max-width: 60rem;
+  border-radius: 12px;
+  background-color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  padding: 1rem 2rem;
+}
+
+#comments ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#comments li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+
+#comments hr {
+  border: 1px solid #ddd;
+  margin: 10px 0;
+}
+
+
+#comments p {
+  color: #464646;
+  font-weight: bold;
+}
+
+#comments a {
+  text-decoration: none; /* Removes the underline from the links */
+}
+
+#comments .comment-details {
+  flex-grow: 1;
+}
+
+#comments .comment-buttons {
+  display: flex;
+  gap: 10px; /* Adds space between the buttons */
+}
+
+#comments .comment-buttons button {
+  padding: 8px 16px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  border: none;
+  color: white;
+}
+
+#comments .like-button {
+  background-color: #390281; /* Green for "Like" */
+}
+
+#comments .like-button:hover {
+  background-color: #de8b15; /* Darker green when hovered */
+}
+
+
+
+
+
+#post-actions .comment-buttons button {
+  padding: 8px 16px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  border: none;
+  color: white;
+}
+
+#post .like-button {
+  background-color: #390281; /* Green for "Like" */
+}
+
+#post .like-button:hover {
+  background-color: #de8b15; /* Darker green when hovered */
+}
+
+/* Styling for the section where the button is located */
+#post-actions {
+  margin-top: 3rem;  /*Adds more space between the tags and the button*/
+  margin-bottom: 2rem; /* Ensures space below the button */
+  text-align: left;    /* Align the button to the left */
+  display: flex;
+  align-items: center; /*Align the button properly*/
+}
+
+/* Styling for the "Read Later" button */
+.read-later-button {
+  background-color: #ff5733; /* Button background color */
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+/* Hover effect for the button */
+.read-later-button:hover {
+  background-color: #e84c2f; /* Darker hover color */
+  transform: scale(1.05); /* Slight scale effect when hovered */
+}
+
+/* Focus effect for accessibility */
+.read-later-button:focus {
+  outline: none;
+  box-shadow: 0 0 10px rgba(255, 87, 51, 0.7); /* Focus glow */
+}
+
+/* Active state effect */
+.read-later-button:active {
+  transform: scale(1); /* Button resets when clicked */
+}
