@@ -5,21 +5,10 @@
 ---
 
 ## Table of Contents
-- [📁 Project Structure](#-project-structure)
 - [⚙️ Local Setup](#-local-setup)
 - [✨ Features](#-features)
 - [🪪 License](#-license)
 - [🙌 Acknowledgments](#-acknowledgments)
-
----
-
-## 📁 Project Structure
-<pre lang="markdown">
-nota/
-  ├── config/       # Project configuration
-  ├── ...
-  └── ...
-</pre>
 
 ---
 
@@ -60,11 +49,12 @@ To run Nota in development mode, make sure that the `DEBUG` setting in `config/s
 
 ## ✨ Features
 
-- [ ] Blog post creation and editing
+- [ ] Create posts
 - [ ] Markdown support
-- [ ] Comment system
+- [ ] Comment on posts
+- [ ] Read-Later list
 - [ ] Admin interface
-- [ ] Tagging and categorization
+- [ ] Post tagging
 - [ ] User authentication
 
 *_(Features are a work in progress and subject to change.)_*
