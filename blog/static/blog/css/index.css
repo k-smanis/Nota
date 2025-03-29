@@ -61,7 +61,7 @@
 #about {
   text-align: center;
   padding: 3rem;
-  background-color: #e48900;
+  background-color: #6305dd;
   margin-top: 5rem;
 }
 
@@ -69,7 +69,32 @@
   font-size: 3rem;
 }
 
-#about p {
+#about pre {
   font-size: 1.5rem;
-  color: #353535;
+  color: #ffffff;
+}
+
+/* Floating button styling */
+.floating-btn {
+  position: fixed;
+  bottom: 80px; /* Slightly higher than before */
+  right: 80px;  /* Slightly away from the edge */
+  color: white;
+  border-radius: 50%;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25); /* Larger shadow for better depth */
+  transition: transform 0.2s ease, background-color 0.3s ease; /* Smooth transitions */
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Ensure it's always on top */
+  font-size: 2rem; /* Increased font size */
+}
+
+.floating-btn:hover {
+  transform: scale(1.15); /* Slightly larger on hover */
+}
+
+.floating-btn:focus {
+  outline: none; /* Removes focus outline when clicked */
 }

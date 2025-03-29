@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+    Nota - My Stored Posts
+{% endblock %}
+
+
+{% block css_files %}
+    <link rel="stylesheet" href="{% static "blog/css/blog_stored_posts.css" %}">
+{% endblock %}
+
+
+{% block content %}
+    <section id="stored-posts">
+        <ul>
+            {% if context.has_posts%}
+                {% for post in context.stored_posts %}
+                    {% include "blog/includes/blog_post_component.html" with post_slug=post.slug %}
+                {% endfor %}
+            {% else %}
+                    <h1>You have caught up with all your posts!</h1>
+            {% endif %}
+        </ul>
+    </section>
+{% endblock %}

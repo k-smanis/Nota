@@ -30,7 +30,7 @@ class PostModel(models.Model):
     author = models.ForeignKey(
         to=AuthorModel, on_delete=models.SET_NULL, related_name="posts", null=True
     )
-    date = models.DateField(auto_now=True)
+    date = models.DateField(auto_now_add=True)
     tags = models.ManyToManyField(to=TagModel, related_name="posts")
 
     def save(self, *args, **kwargs) -> None:
@@ -43,3 +43,15 @@ class PostModel(models.Model):
 
     class Meta:
         ordering = ["-date"]
+
+
+class CommentModel(models.Model):
+    user_name = models.CharField(max_length=120)
+    user_email = models.EmailField()
+    content = models.TextField()
+    post = models.ForeignKey(
+        to=PostModel, on_delete=models.CASCADE, related_name="comments"
+    )
+
+    def __str__(self):
+        return self.content
